@@ -11,16 +11,9 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#ifdef ASCII_H
-#define ASCII_H
+#include "ascii.h"
 
-class Ascii {
-
-public:
-    Ascii(int width, int height);
-    ~Ascii();
-    void setPix(int x, int y, int color);
-    void show();
+ASCII::ASCII(){
+    width = 0;
+    height = 0;
 }
-
-#endif
