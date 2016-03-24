@@ -14,13 +14,13 @@
 #ifndef ASCII_H
 #define ASCII_H
 
-class Ascii{
+class Ascii {
 
 public:
     Ascii(int width, int height);
     ~Ascii();
     void setPix(int x, int y, int color);
     void show();
-}
+};
 
 #endif
