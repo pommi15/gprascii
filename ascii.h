@@ -11,10 +11,10 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#ifdef ASCII_H
+#ifndef ASCII_H
 #define ASCII_H
 
-class Ascii {
+class Ascii{
 
 public:
     Ascii(int width, int height);
