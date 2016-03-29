@@ -13,13 +13,14 @@
 
 #ifndef ASCII_H
 #define ASCII_H
+#include <string>
 
 class Ascii {
 private:
     int width;
     int height;
-    char colourset[];
-    char pic[];
+    std::string colourset[80];
+    char** pic;
 public:
     Ascii(int width, int height);
     ~Ascii();
