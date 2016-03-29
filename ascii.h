@@ -19,8 +19,8 @@ class Ascii {
 private:
     int width;
     int height;
-    std::string colourset[80];
-    char** pic;
+    std::string colourset;
+    std::string** pic;
 public:
     Ascii(int width, int height);
     ~Ascii();
