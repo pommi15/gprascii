@@ -18,8 +18,9 @@ using namespace std;
 
 int main()
 {
-    Ascii img(16, 16);
+    Ascii *img = new Ascii(18, 2);
 
-    img.show();
+    img->show();
+    delete img;
     return 0;
 }
