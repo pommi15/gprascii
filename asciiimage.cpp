@@ -35,12 +35,14 @@ Ascii::~Ascii(){
 };
 
  void Ascii::setPix(int x, int y, int colour){
-    if(colour < 0) {
-        this->pic[x][y] = this->colourset[0];
-    }else if(colour < 69) {
-        this->pic[x][y] = this->colourset[colour];
-    }else {
-        this->pic[x][y] = this->colourset[69];
+    if((x >= 0) && (x < (this->width - 1)) && (y >= 0) && (y < (this->height) - 1)){
+        if(colour < 0) {
+            this->pic[x][y] = this->colourset[0];
+        }else if(colour < 69) {
+            this->pic[x][y] = this->colourset[colour];
+        }else {
+            this->pic[x][y] = this->colourset[69];
+        }
     }
 }
 
