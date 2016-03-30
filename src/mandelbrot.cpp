@@ -12,7 +12,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
 #include <iostream>
-#include "asciiimage.h"
+#include "include/asciiimage.h"
 
 using namespace std;
 
@@ -82,5 +82,4 @@ int main()
     img->show();
     delete img;
     return 0;
-
 }
