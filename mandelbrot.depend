@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1458733101 source:/home/thomas/FH/GRP/mandelbrot/main.cpp
-	<iostream>
-
-1458734481 source:/home/thomas/FH/GRP/gprascii/main.cpp
-	<iostream>
-

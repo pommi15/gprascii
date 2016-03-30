@@ -11,9 +11,21 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#include "ascii.h"
+#ifndef ASCII_H
+#define ASCII_H
+#include <string>
 
-ASCII::ASCII(){
-    width = 0;
-    height = 0;
-}
+class Ascii {
+private:
+    int width;
+    int height;
+    std::string colourset;
+    std::string** pic;
+public:
+    Ascii(int width, int height);
+    ~Ascii();
+    void setPix(int x, int y, int colour);
+    void show();
+};
+
+#endif

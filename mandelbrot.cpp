@@ -11,16 +11,21 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#ifdef ASCII_H
-#define ASCII_H
+#include <iostream>
+#include "asciiimage.h"
 
-class Ascii {
+using namespace std;
 
-public:
-    Ascii(int width, int height);
-    ~Ascii();
-    void setPix(int x, int y, int color);
-    void show();
+int main()
+{
+    Ascii *img = new Ascii(16, 16);
+    for(int x = 0; x < 16; ++x) {
+        for(int y = 0; y < 16; ++y) {
+            img->setPix(x, y, x * y);
+        }
+    }
+
+    img->show();
+    delete img;
+    return 0;
 }
-
-#endif
