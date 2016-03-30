@@ -12,7 +12,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 #include <iostream>
 
-#include "ascii.h"
+#include "asciiimage.h"
 
 Ascii::Ascii(int width, int height){
     this->width = width;

@@ -12,7 +12,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
 #include <iostream>
-#include "ascii.h"
+#include "asciiimage.h"
 
 using namespace std;
 
