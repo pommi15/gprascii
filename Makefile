@@ -5,7 +5,7 @@
 OBJDIR=obj
 OUTDIR=bin
 SRCDIR=src
-INCDIR=include
+INCDIR=$(SRCDIR)/include
 VPATH=$(SRCDIR):$(OBJDIR):$(INCDIR)
 CC=g++
 CFLAGS=-g -Wall -O -std=c++11 -I $(INCDIR)

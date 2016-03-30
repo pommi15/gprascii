@@ -10,22 +10,22 @@
 |     Thomas Rauhofer   |
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
-
-#ifndef ASCII_H
-#define ASCII_H
+#ifndef INCLDUE_ASCIIIMAGE_H_
+#define INCLDUE_ASCIIIMAGE_H_
 #include <string>
-
+#include <iostream>
 class Ascii {
 private:
-    int width;
-    int height;
-    std::string colourset;
-    std::string** pic;
+  int width;
+  int height;
+  std::string colourset;
+  std::string **pic;
+
 public:
-    Ascii(int width, int height);
-    ~Ascii();
-    void setPix(int x, int y, int colour);
-    void show();
+  Ascii(int width, int height);
+  virtual ~Ascii();
+  void setPix(int x, int y, int colour);
+  void show();
 };
 
-#endif
+#endif // INCLUDE_ASCIIIMAGE_H_
