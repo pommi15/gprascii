@@ -22,7 +22,7 @@ Ascii::Ascii(int width, int height){
     for(int i = 0; i < this->height; ++i){
         this->pic[i] = new std::string[this->width];
         for(int j = 0; j < this->width; ++j){
-            this->pic[i][j] = 'x';
+            this->pic[i][j] = ' ';
         }
     }
 }
