@@ -11,18 +11,11 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
 #include "include/asciiimage.h"
 #include <string>
-#include <iostream>
 
-Ascii::Ascii(int width, int height) {
-  this->width = width;
-  this->height = height;
-  this->colourset =
-      " .'`^\",:;Il!i><~+_-?][}{1)(|\\/"
-      "tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-  this->pic = new std::string*[this->height];
+Ascii::Ascii(int w, int h) : width(w), height(h) {
+  this->pic = new std::string *[this->height];
   for (int i = 0; i < this->height; ++i) {
     this->pic[i] = new std::string[this->width];
     for (int j = 0; j < this->width; ++j) {
