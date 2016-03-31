@@ -31,6 +31,7 @@ int main()
     double x1 = 0.;
     double y1 = 0.;
     int maxi = 0;
+    bool ended = true;
 
     cout << "Enter width: ";
     cin >> width;
@@ -52,7 +53,7 @@ int main()
 
     for(int x = 0; x < width; ++x) {
         for(int y = 0; y < height; ++y) {
-
+            ended = true;
             double zr = 0.;
             double zi = 0.;
 
@@ -64,6 +65,7 @@ int main()
                     std::cout << "x: " << x << " y: " << y << " i: " << i << std::endl;
                     std::cout << "nextzr: " << nextzr << " nextzi: " << nextzi << std::endl;
                     img->setPix(x, y, (i%70));
+                    ended = false;
                     break;
                 }
 
@@ -71,6 +73,10 @@ int main()
                 zr = nextzr;
                 zi = nextzi;
             }
+             if(ended){
+                    img->setPix(x, y, (maxi%70));
+                }
+
         }
     }
 
