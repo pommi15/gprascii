@@ -62,8 +62,8 @@ int main()
 
             for(int i = 0; i < maxi; ++i) {
 
-                double nextzr = (zr * zr) - (zi * zi) + scale_x(x, x0, x1, width);
-                double nextzi = (2 * zr * zi) + scale_y(y, y0, y1, height);
+                double nextzr = (zr * zr) - (zi * zi) + x;
+                double nextzi = (2 * zr * zi) + y;
                 if((nextzr * nextzr + nextzi * nextzi) > 4) {
                     img->setPix(x, y, (i%70));
                     break;
