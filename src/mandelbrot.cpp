@@ -54,8 +54,9 @@ int main()
 
 
     Ascii *img = new Ascii(width, height);
-    for(int y = 0; y < height; ++y) {
-        for(int x = 0; x < width; ++x) {
+
+    for(int x = 0; x < width; ++x) {
+        for(int y = 0; y < height; ++y) {
 
             double zr = 0.;
             double zi = 0.;
