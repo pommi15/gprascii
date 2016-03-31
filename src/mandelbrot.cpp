@@ -17,7 +17,7 @@
 using namespace std;
 
 double scale(int p, double p0, double p1, int limit){
-    double new_p = p * ((p1 - p0) / (limit - 1)) - p0;
+    double new_p = p * ((p1 - p0) / (limit - 1)) + p0;
     return new_p;
 
 }
@@ -62,8 +62,6 @@ int main()
                 double nextzr = (zr * zr) - (zi * zi) + scale(x, x0, x1, width);
                 double nextzi = (2 * zr * zi) + scale(y, y0, y1, height);
                 if((nextzr * nextzr + nextzi * nextzi) > 4) {
-                    std::cout << "x: " << x << " y: " << y << " i: " << i << std::endl;
-                    std::cout << "nextzr: " << nextzr << " nextzi: " << nextzi << std::endl;
                     img->setPix(x, y, (i%70));
                     ended = false;
                     break;
