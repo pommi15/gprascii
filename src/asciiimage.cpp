@@ -13,6 +13,8 @@
 
 
 #include "include/asciiimage.h"
+#include <string>
+#include <iostream>
 
 Ascii::Ascii(int width, int height) {
   this->width = width;
@@ -34,15 +36,18 @@ Ascii::~Ascii() {
     delete[] this->pic[i];
   }
   delete[] this->pic;
-};
+}
 
 void Ascii::setPix(int x, int y, int colour) {
-  if (colour < 0) {
-    this->pic[x][y] = this->colourset[0];
-  } else if (colour < 69) {
-    this->pic[x][y] = this->colourset[colour];
-  } else {
-    this->pic[x][y] = this->colourset[69];
+
+  if (x >= 0 && x < this->width && y >= 0 && y < this->height) {
+    if (colour < 0) {
+      this->pic[y][x] = this->colourset[0];
+    } else if (colour < 69) {
+      this->pic[y][x] = this->colourset[colour];
+    } else {
+      this->pic[y][x] = this->colourset[69];
+    }
   }
 }
 
