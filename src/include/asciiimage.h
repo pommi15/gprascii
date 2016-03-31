@@ -18,11 +18,12 @@ class Ascii {
 private:
   int width;
   int height;
-  std::string colourset;
+  const std::string colourset = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/"
+                                "tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
   std::string **pic;
 
 public:
-  Ascii(int width, int height);
+  Ascii(int w, int h);
   virtual ~Ascii();
   void setPix(int x, int y, int colour);
   void show();
