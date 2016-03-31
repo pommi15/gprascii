@@ -16,14 +16,9 @@
 
 using namespace std;
 
-double scale_x(int x, double x0, double x1, int width){
-    double new_x = ((x) / (width - 1)) * (x1 - x0) - x0;
-    return new_x;
-
-}
-double scale_y(int y, double y0, double y1, int height){
-    double new_y = ((y) / (height - 1)) * (y1 - y0) - y0;
-    return new_y;
+double scale(int p, double p0, double p1, int limit){
+    double new_p = p * ((p1 - p0) / (limit - 1)) - p0;
+    return new_p;
 
 }
 
@@ -63,9 +58,11 @@ int main()
 
             for(int i = 0; i < maxi; ++i) {
 
-                double nextzr = (zr * zr) - (zi * zi) + x;
-                double nextzi = (2 * zr * zi) + y;
+                double nextzr = (zr * zr) - (zi * zi) + scale(x, x0, x1, width);
+                double nextzi = (2 * zr * zi) + scale(y, y0, y1, height);
                 if((nextzr * nextzr + nextzi * nextzi) > 4) {
+                    std::cout << "x: " << x << " y: " << y << " i: " << i << std::endl;
+                    std::cout << "nextzr: " << nextzr << " nextzi: " << nextzi << std::endl;
                     img->setPix(x, y, (i%70));
                     break;
                 }
@@ -74,7 +71,6 @@ int main()
                 zr = nextzr;
                 zi = nextzi;
             }
-
         }
     }
 
