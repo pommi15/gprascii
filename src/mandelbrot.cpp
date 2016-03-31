@@ -78,7 +78,6 @@ int main()
         }
     }
 
-
     img->show();
     delete img;
     return 0;
