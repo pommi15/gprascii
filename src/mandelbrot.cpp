@@ -17,7 +17,7 @@
 using namespace std;
 
 double scale(int p, double p0, double p1, int limit){
-    double new_p = p * ((p1 - p0) / (limit - 1)) - p0;
+    double new_p = p * ((p1 - p0) / (limit - 1)) + p0;
     return new_p;
 
 }
@@ -52,30 +52,29 @@ int main()
     Ascii *img = new Ascii(width, height);
 
     for(int x = 0; x < width; ++x) {
+
         for(int y = 0; y < height; ++y) {
+
             ended = true;
             double zr = 0.;
             double zi = 0.;
+
 
             for(int i = 0; i < maxi; ++i) {
 
                 double nextzr = (zr * zr) - (zi * zi) + scale(x, x0, x1, width);
                 double nextzi = (2 * zr * zi) + scale(y, y0, y1, height);
                 if((nextzr * nextzr + nextzi * nextzi) > 4) {
-                    std::cout << "x: " << x << " y: " << y << " i: " << i << std::endl;
-                    std::cout << "nextzr: " << nextzr << " nextzi: " << nextzi << std::endl;
                     img->setPix(x, y, (i%70));
                     ended = false;
                     break;
                 }
-
-
                 zr = nextzr;
                 zi = nextzi;
             }
-             if(ended){
-                    img->setPix(x, y, (maxi%70));
-                }
+            if(ended){
+                img->setPix(x, y, (maxi%70));
+            }
 
         }
     }
