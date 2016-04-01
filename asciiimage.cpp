@@ -11,7 +11,7 @@
 |        if15b029       |
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#include "include/asciiimage.h"
+#include "asciiimage.h"
 #include <string>
 
 Ascii::Ascii(int w, int h) : width(w), height(h) {

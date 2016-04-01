@@ -2,13 +2,12 @@
 # Thomas Rauhofer and Tobias Watzek
 # @)>-}-;--
 
-OBJDIR=obj
-OUTDIR=bin
-SRCDIR=src
-INCDIR=$(SRCDIR)/include
-VPATH=$(SRCDIR):$(OBJDIR):$(INCDIR)
+OBJDIR=.
+OUTDIR=.
+SRCDIR=.
+VPATH=$(SRCDIR):$(OBJDIR)
 CC=g++
-CFLAGS=-g -Wall -O -std=c++11 -I $(INCDIR)
+CFLAGS=-g -Wall -O -std=c++11
 
 all: directories mandelbrot
 
@@ -22,7 +21,7 @@ asciiimage.o: asciiimage.cpp asciiimage.h
 
 .PHONY: clean
 clean:
-	rm -f $(OBJDIR)/*.o $(OUTDIR)/*
+	rm -f $(OBJDIR)/*.o mandelbrot
 
 .PHONY: directories
 directories:
