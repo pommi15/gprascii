@@ -52,10 +52,13 @@ int main()
     Ascii *img = new Ascii(width, height);
 
     for(int x = 0; x < width; ++x) {
+
         for(int y = 0; y < height; ++y) {
+
             ended = true;
             double zr = 0.;
             double zi = 0.;
+
 
             for(int i = 0; i < maxi; ++i) {
 
@@ -66,14 +69,12 @@ int main()
                     ended = false;
                     break;
                 }
-
-
                 zr = nextzr;
                 zi = nextzi;
             }
-             if(ended){
-                    img->setPix(x, y, (maxi%70));
-                }
+            if(ended){
+                img->setPix(x, y, (maxi%70));
+            }
 
         }
     }
