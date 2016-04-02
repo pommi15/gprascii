@@ -1,8 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~
 |       @)>-}-;--       |
-|      ASCII Image      |
-|          and          |
-|     Mandelbrot Set    |
+|       mandelbrot      |
 |           by          |
 |      Tobias Watzek    |
 |        if15b038       |
@@ -12,19 +10,29 @@
 ~~~~~~~~~~~~~~~~~~~~~~~*/
 
 #include <iostream>
+
 #include "asciiimage.h"
 
 using namespace std;
 
+/**
+ * Scale a point
+ * @param  p     [description]
+ * @param  p0    [description]
+ * @param  p1    [description]
+ * @param  limit [description]
+ * @return       [description]
+ */
 double scale(int p, double p0, double p1, int limit){
     double new_p = p * ((p1 - p0) / (limit - 1)) + p0;
     return new_p;
-
 }
 
 int main()
 {
+    // Width of the image
     int width = 0;
+    // Height of the image
     int height = 0;
     double x0 = 0.;
     double y0 = 0.;
